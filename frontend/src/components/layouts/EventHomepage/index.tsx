@@ -7,6 +7,7 @@ import SelectProducts from "../../routes/product-widget/SelectProducts";
 import "../../../styles/widget/default.scss";
 import React from "react";
 import {EventDocumentHead} from "../../common/EventDocumentHead";
+import {LanguageSwitcher} from "../../common/LanguageSwitcher";
 import {eventCoverImageUrl} from "../../../utilites/urlHelper.ts";
 import {Event} from "../../../types.ts";
 import {HomepageInfoMessage} from "../../common/HomepageInfoMessage";
@@ -72,6 +73,9 @@ const EventHomepage = ({colors, continueButtonText, backgroundType, ...loaderDat
                 <div className={classes.container}>
                     <Header event={event}/>
                     <div className={classes.innerContainer}>
+                        <div className={classes.languageSwitcher}>
+                            <LanguageSwitcher/>
+                        </div>
                         <div className={classes.eventInfo}>
                             <EventInformation event={event}/>
                         </div>
